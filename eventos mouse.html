@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        img{
+            width: 100px;
+            position: absolute;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body onmousemove="move(event)">
+    <p id="mostra">cordenadas</p>
+    <img src="kakashi.jpg" alt="">
+
+    <script>
+        function move(event){
+            var x = event.clientX
+            var y = event.clientY
+            document.querySelector("#mostra").innerHTML= "x = "+ x + " y = " + y
+        
+            var img= document.querySelector("img")
+            img.style.left= 20+x + "px"
+            img.style.top= 20+y + "px"
+        }
+    </script>
+</body>
+</html>
